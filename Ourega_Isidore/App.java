@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.io.File;
 
 public class App {
     public static void main(String[] args) {
@@ -27,8 +28,22 @@ public class App {
             }
 
             // Étape 4 : Sauvegarder (Ici en ajoutant "_clean" au nom)
-            String cheminSortie = cheminEntree.replace(".csv", "_nettoye.csv");
-            gf.sauvegarderCSV(cheminSortie, lignesNettoyees);
+            File fichierEntree = new File(cheminEntree);
+String nom = fichierEntree.getName();
+String dossier = fichierEntree.getParent();
+
+// Enlever l'extension
+int index = nom.lastIndexOf(".");
+String nomSansExtension = (index > 0) ? nom.substring(0, index) : nom;
+
+// Nouveau nom
+String nouveauNom = nomSansExtension + "_nettoye.csv";
+
+// Nouveau chemin
+String cheminSortie = dossier + File.separator + nouveauNom;
+
+// Sauvegarde
+gf.sauvegarderCSV(cheminSortie, lignesNettoyees);
         } else {
             System.out.println("Opération annulée.");
         }
