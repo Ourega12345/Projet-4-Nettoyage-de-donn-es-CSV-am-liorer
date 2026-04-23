@@ -21,9 +21,18 @@ public class App {
                 StringBuilder ligneTraitee = new StringBuilder();
 
                 for (int i = 0; i < cellules.length; i++) {
-                    ligneTraitee.append(nettoyeur.traiterCellule(cellules[i]));
-                    if (i < cellules.length - 1) ligneTraitee.append(",");
-                }
+    String celluleNettoyee = nettoyeur.traiterCellule(cellules[i]);
+
+    // On ignore les valeurs null (manquantes)
+    if (celluleNettoyee != null) {
+        ligneTraitee.append(celluleNettoyee);
+
+        // Ajouter virgule seulement si ce n'est pas la dernière valeur utile
+        if (i < cellules.length - 1) {
+            ligneTraitee.append(",");
+        }
+    }
+}
                 lignesNettoyees.add(ligneTraitee.toString());
             }
 
