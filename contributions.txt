@@ -1,0 +1,5 @@
+
+Dago Ourega à conçu : 
+Les opérations liées aux fichiers notamment sélection du fichier CSV, lecture des données.
+La logique de nettoyage des données : suppression des espaces etc...
+ Le point d’entrée du programme. Coordonneé les différentes étapes.
