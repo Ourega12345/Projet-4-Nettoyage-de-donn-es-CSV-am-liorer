@@ -118,7 +118,7 @@ Projet réalisé dans le cadre d’un apprentissage en :
 
 ---
 
-## 📌 Améliorations possibles
+##  Améliorations possibles
 
 * Support des fichiers volumineux
 * Interface graphique complète
