@@ -109,7 +109,7 @@ BOB,VALEUR_MANQUANTE,TORONTO
 ---
 
 ##  Auteur
-
+### Dago Ourega 
 Projet réalisé dans le cadre d’un apprentissage en :
 
 * Programmation Java
